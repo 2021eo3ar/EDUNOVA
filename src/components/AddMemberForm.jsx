@@ -88,7 +88,7 @@ const AddMemberForm = ({ onClose, onSave }) => {
                 className="bg-white text-black border border-black px-4 py-2 rounded-md text-sm font-bold shadow-sm cursor-pointer flex items-center space-x-2 hover:bg-blue-50"
               >
                 <FontAwesomeIcon icon={faCameraRotate} />
-                <span>CHANGE PHOTO</span>
+                <span>UPLOAD PHOTO</span>
                 <input
                   type="file"
                   id="photo-upload"
