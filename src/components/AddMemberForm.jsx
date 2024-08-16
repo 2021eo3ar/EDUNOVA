@@ -124,11 +124,16 @@ const AddMemberForm = ({ onClose, onSave }) => {
 
             <div>
               <label className="block text-sm font-semibold text-black">ROLE</label>
-              <input
-                type="text"
+              <select
                 {...register('role')}
                 className="mt-1 block w-full border border-b-black rounded-sm shadow-sm px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
-              />
+              >
+                <option value="">Select Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Manager">Manager</option>
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+              </select>
               {errors.role && (
                 <p className="text-red-600 text-sm mt-1">{errors.role.message}</p>
               )}
@@ -150,11 +155,14 @@ const AddMemberForm = ({ onClose, onSave }) => {
 
             <div>
               <label className="block text-sm font-semibold text-black">STATUS</label>
-              <input
-                type="text"
+              <select
                 {...register('status')}
                 className="mt-1 block w-full border border-b-black rounded-sm shadow-sm px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
-              />
+              >
+                <option value="">Select Status</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
               {errors.status && (
                 <p className="text-red-600 text-sm mt-1">{errors.status.message}</p>
               )}
@@ -174,7 +182,6 @@ const AddMemberForm = ({ onClose, onSave }) => {
               )}
             </div>
 
-           
             <div>
               <label className="block text-sm font-semibold text-black">GENDER</label>
               <input
@@ -182,12 +189,11 @@ const AddMemberForm = ({ onClose, onSave }) => {
                 {...register('gender')}
                 className="mt-1 block w-full border border-b-black rounded-sm shadow-sm px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
               />
-              {errors.contactNo && (
+              {errors.gender && (
                 <p className="text-red-600 text-sm mt-1">{errors.gender.message}</p>
               )}
             </div>
 
-        
             <div>
               <label className="block text-sm font-semibold text-black">NATIONALITY</label>
               <input
@@ -195,7 +201,7 @@ const AddMemberForm = ({ onClose, onSave }) => {
                 {...register('nationality')}
                 className="mt-1 block w-full border border-b-black rounded-sm shadow-sm px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
               />
-              {errors.contactNo && (
+              {errors.nationality && (
                 <p className="text-red-600 text-sm mt-1">{errors.nationality.message}</p>
               )}
             </div>

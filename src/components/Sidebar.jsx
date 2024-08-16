@@ -11,19 +11,19 @@ const Sidebar = () => {
       <ul className="space-y-4">
         <li
           className={`flex items-center space-x-3 font-semibold ${
-            location.pathname === "/" ? "text-purple-600" : "text-black "
+            location.pathname === "/" ? "text-purple-600" : "text-black"
           }`}
         >
-          <FontAwesomeIcon
-            icon={faThLarge}
-            className={`${
-              location.pathname === "/"
-                ? "bg-purple-600 text-white rounded-md border-2 border-purple-600 p-2"
-                : "text-white bg-black border-2 rounded-md p-2"
-            }`}
-          />
-          <Link to="/" className="font-bold text-sm">
-            Overview
+          <Link to="/" className="flex items-center space-x-3">
+            <FontAwesomeIcon
+              icon={faThLarge}
+              className={`${
+                location.pathname === "/"
+                  ? "bg-purple-600 text-white rounded-md border-2 border-purple-600 p-2"
+                  : "text-white bg-black border-2 rounded-md p-2"
+              }`}
+            />
+            <span className="font-bold text-sm">Overview</span>
           </Link>
         </li>
         <li
@@ -33,16 +33,16 @@ const Sidebar = () => {
               : "text-black"
           }`}
         >
-          <FontAwesomeIcon
-            icon={faThLarge}
-            className={`${
-              location.pathname === "/people_directory"
-                ? "bg-purple-600 text-white rounded-md border-2 border-purple-600 p-2"
-                : "text-white bg-black border-2 rounded-md p-2"
-            }`}
-          />
-          <Link to="/people_directory" className="font-bold text-sm">
-            People Directory
+          <Link to="/people_directory" className="flex items-center space-x-3">
+            <FontAwesomeIcon
+              icon={faThLarge}
+              className={`${
+                location.pathname === "/people_directory"
+                  ? "bg-purple-600 text-white rounded-md border-2 border-purple-600 p-2"
+                  : "text-white bg-black border-2 rounded-md p-2"
+              }`}
+            />
+            <span className="font-bold text-sm">People Directory</span>
           </Link>
         </li>
       </ul>
